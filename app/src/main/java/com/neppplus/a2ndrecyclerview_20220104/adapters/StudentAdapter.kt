@@ -22,6 +22,13 @@ class StudentAdapter(
         val txtAge = row.findViewById<TextView>(R.id.txtAge)
         val txtAddress = row.findViewById<TextView>(R.id.txtAddress)
 
+        fun bind(data: Student) {
+
+            txtName.text = data.name
+            txtAddress.text = data.address
+
+            txtAge.text = "(${data.birthYear}세)"
+        }
 
     }
 
