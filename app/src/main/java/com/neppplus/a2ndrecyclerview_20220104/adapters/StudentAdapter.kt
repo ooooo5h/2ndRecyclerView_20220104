@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.neppplus.a2ndrecyclerview_20220104.R
 import com.neppplus.a2ndrecyclerview_20220104.models.Student
@@ -14,6 +15,12 @@ class StudentAdapter(
 ) : RecyclerView.Adapter<StudentAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(row: View) : RecyclerView.ViewHolder(row) {
+
+//        한 줄에 해당하는 정보들 변수로 담기
+
+        val txtName = row.findViewById<TextView>(R.id.txtName)
+        val txtAge = row.findViewById<TextView>(R.id.txtAge)
+        val txtAddress = row.findViewById<TextView>(R.id.txtAddress)
 
 
     }
