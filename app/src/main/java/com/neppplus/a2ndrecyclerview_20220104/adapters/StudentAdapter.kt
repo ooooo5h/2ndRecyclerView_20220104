@@ -26,5 +26,9 @@ class StudentAdapter(
 
     override fun getItemCount(): Int {
 
+//        getItemCount : 총 몇줄의 목록이 나올꺼야?
+
+        return mList.size
+
     }
 }
