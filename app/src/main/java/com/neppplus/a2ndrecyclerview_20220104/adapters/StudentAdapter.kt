@@ -46,6 +46,10 @@ class StudentAdapter(
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
+//
+
+        holder.bind(mList[position])
+
     }
 
     override fun getItemCount(): Int {
