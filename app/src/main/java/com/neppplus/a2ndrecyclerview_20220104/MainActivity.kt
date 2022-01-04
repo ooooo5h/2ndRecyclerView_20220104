@@ -2,8 +2,10 @@ package com.neppplus.a2ndrecyclerview_20220104
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.neppplus.a2ndrecyclerview_20220104.adapters.StudentAdapter
 import com.neppplus.a2ndrecyclerview_20220104.models.Student
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -27,5 +29,9 @@ class MainActivity : AppCompatActivity() {
         mStudentList.add( Student("데프콘", 1998, "서울시 성북북구"))
 
         mAdapter = StudentAdapter(this, mStudentList)
+
+        studentRecyclerView.adapter = mAdapter
+        studentRecyclerView.layoutManager = LinearLayoutManager(this)
+
     }
 }
