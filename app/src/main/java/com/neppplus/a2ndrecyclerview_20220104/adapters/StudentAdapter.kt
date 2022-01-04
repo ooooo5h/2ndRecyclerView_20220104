@@ -1,10 +1,15 @@
 package com.neppplus.a2ndrecyclerview_20220104.adapters
 
+import android.content.Context
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.neppplus.a2ndrecyclerview_20220104.models.Student
 
-class StudentAdapter : RecyclerView.Adapter<StudentAdapter.MyViewHolder>() {
+class StudentAdapter(
+    val mContext : Context,
+    val mList : List<Student>
+) : RecyclerView.Adapter<StudentAdapter.MyViewHolder>() {
 
     inner class MyViewHolder(row: View) : RecyclerView.ViewHolder(row) {
 
@@ -12,14 +17,14 @@ class StudentAdapter : RecyclerView.Adapter<StudentAdapter.MyViewHolder>() {
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        TODO("Not yet implemented")
+
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        TODO("Not yet implemented")
+
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+
     }
 }
