@@ -2,11 +2,15 @@ package com.neppplus.a2ndrecyclerview_20220104
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.neppplus.a2ndrecyclerview_20220104.adapters.StudentAdapter
 import com.neppplus.a2ndrecyclerview_20220104.models.Student
 
 class MainActivity : AppCompatActivity() {
 
     val mStudentList = ArrayList<Student>()
+
+//    화면이 만들어지고 나서, 어댑터 객체를 대입해주기위한 lateinit var 생성
+   lateinit var mAdapter : StudentAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,5 +25,7 @@ class MainActivity : AppCompatActivity() {
         mStudentList.add( Student("문세윤", 1996, "서울시 강남구"))
         mStudentList.add( Student("이이경", 1997, "서울시 송파구"))
         mStudentList.add( Student("데프콘", 1998, "서울시 성북북구"))
+
+        mAdapter = StudentAdapter(this, mStudentList)
     }
 }
